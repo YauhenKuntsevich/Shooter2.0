@@ -27,4 +27,10 @@ public class Handgun : MonoBehaviour
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(shootPoint.position, shootPoint.forward * 9999);
+    }
 }
