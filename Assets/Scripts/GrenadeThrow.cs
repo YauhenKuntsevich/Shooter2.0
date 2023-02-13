@@ -11,12 +11,14 @@ public class GrenadeThrow : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            GrenadeThrowForvard();
+            GrenadeThrowForward();
         }
     }
 
-    void GrenadeThrowForvard()
+    private void GrenadeThrowForward()
     {
-
+        GameObject grenade = Instantiate(grenadePrefab, transform.position, transform.rotation);
+        Rigidbody rigidbody = grenade.GetComponent<Rigidbody>();
+        rigidbody.AddForce(transform.forward * throwForce, ForceMode.VelocityChange);
     }
 }

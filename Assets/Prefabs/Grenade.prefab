@@ -114,6 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3385cde8c069e6c4fbd6406738c27618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 3
+  radius: 5
+  explosionForce: 700
+  explosionEffect: {fileID: 100010, guid: 3a54e93f8b24bd148979509a983ee1df, type: 3}
 --- !u!136 &6960931688597933636
 CapsuleCollider:
   m_ObjectHideFlags: 0
