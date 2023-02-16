@@ -20,7 +20,6 @@ public class Grenade : MonoBehaviour
         countdown = delay;
     }
 
-    // Update is called once per frame
     void Update()
     {
         countdown -= Time.deltaTime;
