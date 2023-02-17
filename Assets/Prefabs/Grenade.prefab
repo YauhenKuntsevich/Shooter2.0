@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8786148424666137724}
   - component: {fileID: 8772837343527335650}
   - component: {fileID: 1753938507607313924}
-  - component: {fileID: 6960931688597933636}
+  - component: {fileID: 5215901701916816762}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -114,8 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3385cde8c069e6c4fbd6406738c27618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &6960931688597933636
-CapsuleCollider:
+  delay: 3
+  radius: 5
+  explosionForce: 700
+  explosionEffect: {fileID: 100010, guid: 3a54e93f8b24bd148979509a983ee1df, type: 3}
+--- !u!135 &5215901701916816762
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,7 +128,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.09
-  m_Height: 0
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.07
   m_Center: {x: -0.0009902306, y: 0.056450196, z: 0.00051543314}
