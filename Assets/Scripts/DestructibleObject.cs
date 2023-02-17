@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class DestructibleObject : MonoBehaviour
 {
-    // [SerializeField] private float hpInitial = 100;
     [SerializeField] private float hpCurrent = 100;
 
     public void ReceiveDamage(float damage)
     {
         hpCurrent -= damage;
 
-        if (hpCurrent < 0)
+        if (hpCurrent <= 0)
         {
             Destroy(gameObject);
         }
