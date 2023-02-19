@@ -10,23 +10,36 @@ public class WeaponSwap : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            weapons[0].SetActive(true); 
-            weapons[1].SetActive(false);
-            weapons[2].SetActive(false);
+            SetWeapon(0);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            weapons[0].SetActive(false);
-            weapons[1].SetActive(true);
-            weapons[2].SetActive(false);
+            SetWeapon(1);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            weapons[0].SetActive(false);
-            weapons[1].SetActive(false);
-            weapons[2].SetActive(true);
+            SetWeapon(2);
+        }
+    }
+
+    private void SetWeapon(int weaponNumber)
+    {
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            bool correctWeapon = (i == weaponNumber);
+
+            var currentWeapon = weapons[i];
+
+            if (correctWeapon)
+            {
+                currentWeapon.SetActive(true);
+            }
+            else
+            {
+                currentWeapon.SetActive(false);
+            }
         }
     }
 }
